@@ -1,0 +1,25 @@
+.container {
+  margin-top: 20px;
+}
+
+.nav {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mail-preview {
+  cursor: pointer;
+}
+
+.mail-view-nav {
+  text-align: right;
+}
+
+.user-actions {
+  text-align: right;
+}
+
+.validation {
+  color: #c7254e;
+}

@@ -1,0 +1,3 @@
+- **npm start** (will start the local web server on localhost:8000)
+- **npm test** (will start karma for countinous testing once code changes are detected)
+- **npm test-single-run** (will start karma for one single test run)

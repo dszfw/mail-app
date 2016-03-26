@@ -1,0 +1,118 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+
+        <form class="form-horizontal" name="userForm"
+              ng-submit="$ctrl.submit(userForm)" novalidate>
+
+          <div class="form-group">
+            <label for="fullName" class="col-sm-2 control-label">Full name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="fullName"
+                     placeholder="Full name" id="fullName"
+                     ng-model="$ctrl.user.fullName"
+                     required ng-maxlength="40" ng-minlength="3">
+              <div class="validation" ng-messages="userForm.fullName.$error"
+                   ng-if="userForm.fullName.$touched" role="alert">
+                <div ng-message="maxlength">This field can be at most 40 characters long.</div>
+                <div ng-message="minlength">This field can be at least 3 characters long.</div>
+                <div ng-message="required">Please enter Full name.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="address"
+                     placeholder="Address" name="address"
+                     ng-model="$ctrl.user.address"
+                     required ng-maxlength="60" ng-minlength="5">
+              <div class="validation" ng-messages="userForm.address.$error"
+                   ng-if="userForm.address.$touched" role="alert">
+                <div ng-message="maxlength">This field can be at most 60 characters long.</div>
+                <div ng-message="minlength">This field can be at least 5 characters long.</div>
+                <div ng-message="required">Please enter address.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email"
+                     placeholder="Email" name="email"
+                     ng-model="$ctrl.user.email"
+                     required ng-maxlength="60" ng-minlength="5">
+              <div class="validation" ng-messages="userForm.email.$error"
+                   ng-if="userForm.email.$touched" role="alert">
+                <div ng-message="maxlength">This field can be at most 60 characters long.</div>
+                <div ng-message="minlength">This field can be at least 5 characters long.</div>
+                <div ng-message="required">Please enter email.</div>
+                <div ng-message="email">This field should be valid email.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Gender</label>
+            <div class="col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="gender" id="optionsGender1"
+                         value="male" ng-model="$ctrl.user.gender"
+                         required> Male
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="gender" id="optionsGender2"
+                         value="female" ng-model="$ctrl.user.gender"
+                         required> Female
+                </label>
+              </div>
+              <div class="validation" ng-messages="userForm.gender.$error"
+                   ng-if="userForm.gender.$touched" role="alert">
+                <div ng-message="required">Please chose gender.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob" class="col-sm-2 control-label">Date of birth</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="dob"
+                     placeholder="Date of birthdate" name="birthdate"
+                     ng-model="$ctrl.user.birthdate" required>
+              <div class="validation" ng-messages="userForm.birthdate.$error"
+                   ng-if="userForm.birthdate.$touched" role="alert">
+                <div ng-message="required">Please enter date of birth.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="avatar" class="col-sm-2 control-label">Avatar</label>
+            <div class="col-sm-10">
+              <input type="url" class="form-control" id="avatar"
+                     placeholder="Avatar url" name="avatarUrl"
+                     ng-model="$ctrl.user.avatarUrl">
+              <div class="validation" ng-messages="userForm.avatarUrl.$error"
+                   ng-if="userForm.avatarUrl.$touched" role="alert">
+                <div ng-message="url">This field should be valid url.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">{{$ctrl.action}}</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

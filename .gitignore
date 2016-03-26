@@ -1,0 +1,17 @@
+# Dependency directory
+node_modules
+npm
+
+# Grunt related
+.grunt
+
+# IDE
+.idea
+
+# Development and testing logs
+logs
+*.log
+tests/*log.xml
+
+# Bower dependencies
+app/resources/dependencies

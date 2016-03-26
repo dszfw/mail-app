@@ -1,0 +1,30 @@
+<div class="row">
+  
+  <div class="col-md-3 col-xs-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" ng-class="$ctrl.isActive('users-all')">
+        <a href="#" ng-click="$ctrl.showAllUsers()">All users</a>
+      </li>
+      <li role="presentation" ng-class="$ctrl.isActive('user-new')">
+        <a href="#" ng-click="$ctrl.showNewUser()">New</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-md-9 col-xs-9">
+    <user-card ng-if="$ctrl.isActive('users-all')" user='usr'
+               ng-repeat="usr in $ctrl.users"
+               on-edit="$ctrl.showEditUser(user)"
+               on-success="$ctrl.showAllUsers()">
+    </user-card>
+    
+    <user-new ng-if="$ctrl.isActive('user-new')"
+              on-success="$ctrl.showAllUsers()">
+    </user-new>
+    
+    <user-edit ng-if="$ctrl.isActive('user-edit')"
+               on-success="$ctrl.showAllUsers()" user="$ctrl.user">
+    </user-edit>
+  </div>
+  
+</div>

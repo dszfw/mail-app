@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <div class="row">
+      <div class="col-md-6 col-xs-6">
+        <p><strong>From:</strong> {{$ctrl.mail.from}}</p>
+        <p><strong>To:</strong> {{$ctrl.mail.to}}</p>
+        <p><strong>Date:</strong> {{$ctrl.mail.date}}</p>
+      </div>
+
+      <div class="col-md-6 col-xs-6 mail-view-nav">
+        <div class="btn-group btn-group-sm" role="group">
+          <button ng-click="$ctrl.deleteMail({mail: $ctrl.mail})" type="button"
+                  class="btn btn-default" aria-label="Delete mail">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default" aria-label="Previous mail"
+                  ng-disabled="$ctrl.prevMailIndex === undefined"
+                  ng-click="$ctrl.showMail({index: $ctrl.prevMailIndex})">
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default" aria-label="Next mail"
+                  ng-disabled="$ctrl.nextMailIndex === undefined"
+                  ng-click="$ctrl.showMail({index: $ctrl.nextMailIndex})">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <h1>{{$ctrl.mail.subject}}</h1>
+        <p>{{$ctrl.mail.content}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

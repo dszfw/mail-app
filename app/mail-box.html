@@ -1,0 +1,41 @@
+<div class="row">
+  
+  <div class="col-md-3 col-xs-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-new')">
+        <a href="#" ng-click="$ctrl.showNew()">New</a>
+      </li>
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-inbox')">
+        <a href="#" ng-click="$ctrl.showInbox()">Inbox</a>
+        </li>
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-sent')">
+        <a href="#" ng-click="$ctrl.showSent()">Sent</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-md-9 col-xs-9">
+    
+    <mail-inbox ng-if="$ctrl.isActiveClass('mail-inbox')"
+                mails="$ctrl.mails" show-mail="$ctrl.showMail(index)">
+    </mail-inbox>
+    
+    <mail-sent ng-if="$ctrl.isActiveClass('mail-sent')"
+               mails="$ctrl.mails" show-mail="$ctrl.showMail(index)">
+    </mail-sent>
+    
+    <mail-full ng-if="$ctrl.isActiveClass('mail-full')"
+               mail="$ctrl.currentMail"
+               prev-mail-index="$ctrl.prevMailIndex"
+               next-mail-index="$ctrl.nextMailIndex"
+               show-mail="$ctrl.showMail(index)"
+               delete-mail="$ctrl.deleteMail(mail)">
+    </mail-full>
+    
+    <mail-new ng-if="$ctrl.isActiveClass('mail-new')"
+              on-success="$ctrl.showSent()">
+    </mail-new>
+    
+  </div>
+  
+</div>

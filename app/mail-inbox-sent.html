@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>{{$ctrl.previewMode=='to' ? 'To' : 'From'}}</th>
+              <th>Subject</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr mail-preview ng-repeat="mail in $ctrl.mails" class="mail-preview"
+                mail="mail" ng-click="$ctrl.showMail({index: $index})"
+                preview-mode="$ctrl.previewMode">
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
