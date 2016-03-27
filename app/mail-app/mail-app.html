@@ -1,17 +1,18 @@
 <ul class="nav nav-tabs">
   <li role="presentation" ng-class="$ctrl.isActiveClass('mail-box')">
-    <a href="#" ng-click="$ctrl.activeView = 'mail-box'">Mail box</a>
+    <a ui-sref="mailbox">Mail box</a>
   </li>
   <li role="presentation" ng-class="$ctrl.isActiveClass('user-cards')">
-    <a href="#" ng-click="$ctrl.activeView = 'user-cards'">Users</a>
+    <a ui-sref="users">Users</a>
   </li>
 </ul>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <mail-box ng-if="$ctrl.isActiveClass('mail-box')"></mail-box>
-      <user-cards ng-if="$ctrl.isActiveClass('user-cards')"></user-cards>
+      <ui-view></ui-view>
+      <!-- <mail-box ng-if="$ctrl.isActiveClass('mail-box')"></mail-box>
+      <user-cards ng-if="$ctrl.isActiveClass('user-cards')"></user-cards> -->
     </div>
   </div>
 </div>

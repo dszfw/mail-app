@@ -3,20 +3,20 @@
   <div class="col-md-3 col-xs-3">
     <ul class="nav nav-pills nav-stacked">
       <li role="presentation" ng-class="$ctrl.isActiveClass('mail-new')">
-        <a href="#" ng-click="$ctrl.showNew()">New</a>
+        <a ui-sref="mailbox.new">New</a>
       </li>
       <li role="presentation" ng-class="$ctrl.isActiveClass('mail-inbox')">
-        <a href="#" ng-click="$ctrl.showInbox()">Inbox</a>
+        <a ui-sref="mailbox.inbox">Inbox</a>
         </li>
       <li role="presentation" ng-class="$ctrl.isActiveClass('mail-sent')">
-        <a href="#" ng-click="$ctrl.showSent()">Sent</a>
+        <a ui-sref="mailbox.sent">Sent</a>
       </li>
     </ul>
   </div>
   
   <div class="col-md-9 col-xs-9">
     
-    <mail-inbox ng-if="$ctrl.isActiveClass('mail-inbox')"
+    <!-- <mail-inbox ng-if="$ctrl.isActiveClass('mail-inbox')"
                 mails="$ctrl.mails" show-mail="$ctrl.showMail(index)">
     </mail-inbox>
     
@@ -34,8 +34,10 @@
     
     <mail-new ng-if="$ctrl.isActiveClass('mail-new')"
               on-success="$ctrl.showSent()">
-    </mail-new>
+    </mail-new> -->
     
+    <ui-view></ui-view>
+
   </div>
   
 </div>
