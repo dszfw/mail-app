@@ -8,5 +8,5 @@ mailFull.component('mailFull', {
     showMail: '&',
     deleteMail: '&'
   },
-  templateUrl: 'mail-full/mail-full.html'
+  templateUrl: 'mail-app/mail-box/mail-full.html'
 });

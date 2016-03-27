@@ -1,7 +1,7 @@
 var module = angular.module('mailApp.mailInboxSent', []);
 
 module.component('mailInbox', {
-  templateUrl: 'mail-inbox-sent/mail-inbox-sent.html',
+  templateUrl: 'mail-app/mail-box/mail-inbox-sent.html',
   bindings: {
     mails: '<',
     showMail: '&'
@@ -12,7 +12,7 @@ module.component('mailInbox', {
 });
 
 module.component('mailSent', {
-  templateUrl: 'mail-inbox-sent/mail-inbox-sent.html',
+  templateUrl: 'mail-app/mail-box/mail-inbox-sent.html',
   bindings: {
     mails: '<',
     showMail: '&'
@@ -29,6 +29,6 @@ module.directive('mailPreview', function() {
       mail: '<',
       previewMode: '<'
     },
-    templateUrl: 'mail-inbox-sent/mail-preview.html'
+    templateUrl: 'mail-app/mail-box/mail-preview.html'
   };
 });

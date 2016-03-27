@@ -40,5 +40,5 @@ mailBox.component('mailBox', {
     
     this.showInbox();
   },
-  templateUrl: 'mail-box/mail-box.html'
+  templateUrl: 'mail-app/mail-box/mail-box.html'
 });

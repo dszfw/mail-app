@@ -6,7 +6,7 @@ module.component('userCard', {
     onEdit: '&',
     onSuccess: '&'
   },
-  templateUrl: 'user-card/user-card.html',
+  templateUrl: 'mail-app/user-cards/user-card.html',
   controller: function(UserService) {
     this.deleteUser = () => {
       UserService.delete(this.user.id)

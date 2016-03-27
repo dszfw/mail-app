@@ -1,7 +1,7 @@
 var module = angular.module('mailApp.userCards', ['mailApp.userService']);
 
 module.component('userCards', {
-  templateUrl: 'user-cards/user-cards.html',
+  templateUrl: 'mail-app/user-cards/user-cards.html',
   controller: function(UserService, ViewService) {
     this.isActive = (view) => ViewService.isActiveClass(view, this);
     this.showAllUsers = () => {

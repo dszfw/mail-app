@@ -1,7 +1,7 @@
 var module = angular.module('mailApp.mailNew', []);
 
 module.component('mailNew', {
-  templateUrl: 'mail-new/mail-new.html',
+  templateUrl: 'mail-app/mail-box/mail-new.html',
   bindings: {
     onSuccess: '&'
   },

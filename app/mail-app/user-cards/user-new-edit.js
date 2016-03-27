@@ -1,7 +1,7 @@
 var module = angular.module('mailApp.userNew', []);
 
 module.component('userNew', {
-  templateUrl: 'user-new-edit/user-new-edit.html',
+  templateUrl: 'mail-app/user-cards/user-new-edit.html',
   bindings: {
     onSuccess: '&'
   },
@@ -21,7 +21,7 @@ module.component('userNew', {
 });
 
 module.component('userEdit', {
-  templateUrl: 'user-new-edit/user-new-edit.html',
+  templateUrl: 'mail-app/user-cards/user-new-edit.html',
   bindings: {
     user: '=',
     onSuccess: '&'
