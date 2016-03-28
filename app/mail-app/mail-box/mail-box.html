@@ -2,14 +2,14 @@
   
   <div class="col-md-3 col-xs-3">
     <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-new')">
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mailbox.new')">
         <a ui-sref="mailbox.new">New</a>
       </li>
-      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-inbox')">
-        <a ui-sref="mailbox.inbox">Inbox</a>
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mailbox.inbox')">
+        <a ui-sref="mailbox.inbox" ng-click="$ctrl.getInbox()">Inbox</a>
         </li>
-      <li role="presentation" ng-class="$ctrl.isActiveClass('mail-sent')">
-        <a ui-sref="mailbox.sent">Sent</a>
+      <li role="presentation" ng-class="$ctrl.isActiveClass('mailbox.sent')">
+        <a ui-sref="mailbox.sent" ng-click="$ctrl.getSent()">Sent</a>
       </li>
     </ul>
   </div>

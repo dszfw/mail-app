@@ -16,12 +16,12 @@
           </button>
           <button type="button" class="btn btn-default" aria-label="Previous mail"
                   ng-disabled="$ctrl.prevMailIndex === undefined"
-                  ng-click="$ctrl.showMail({index: $ctrl.prevMailIndex})">
+                  ng-click="$ctrl.getMail({index: $ctrl.prevMailIndex})">
             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
           </button>
           <button type="button" class="btn btn-default" aria-label="Next mail"
                   ng-disabled="$ctrl.nextMailIndex === undefined"
-                  ng-click="$ctrl.showMail({index: $ctrl.nextMailIndex})">
+                  ng-click="$ctrl.getMail({index: $ctrl.nextMailIndex})">
             <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
           </button>
         </div>

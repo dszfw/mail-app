@@ -12,7 +12,7 @@
           </thead>
           <tbody>
             <tr mail-preview ng-repeat="mail in $ctrl.mails" class="mail-preview"
-                mail="mail" ng-click="$ctrl.showMail({index: $index})"
+                mail="mail" ng-click="$ctrl.getMail({index: $index})"
                 preview-mode="$ctrl.previewMode">
             </tr>
           </tbody>

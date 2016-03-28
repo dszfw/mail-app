@@ -2,18 +2,18 @@ var module = angular.module('mailApp.userCards', ['mailApp.userService']);
 
 module.component('userCards', {
   templateUrl: 'mail-app/user-cards/user-cards.html',
-  controller: function(UserService, ViewService) {
-    this.isActive = (view) => ViewService.isActiveClass(view, this);
-    this.showAllUsers = () => {
+  controller: function(UserService, ViewService, $state) {
+    this.isActive = (state) => $state.is(state) ? 'active' : undefined;
+    this.getAllUsers = () => {
       getAll();
-      ViewService.switchTo('users-all', this);
+      // ViewService.switchTo('users-all', this);
     };
-    this.showNewUser = () => {
-      ViewService.switchTo('user-new', this);
-    };
-    this.showEditUser = (user) => {
+    // this.showNewUser = () => {
+    //   ViewService.switchTo('user-new', this);
+    // };
+    this.getEditUser = (user) => {
       this.user = user;
-      ViewService.switchTo('user-edit', this);
+      // ViewService.switchTo('user-edit', this);
     };
 
     this.showAllUsers();

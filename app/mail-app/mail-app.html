@@ -1,8 +1,8 @@
 <ul class="nav nav-tabs">
-  <li role="presentation" ng-class="$ctrl.isActiveClass('mail-box')">
+  <li role="presentation" ng-class="$ctrl.isActiveClass('mailbox')">
     <a ui-sref="mailbox">Mail box</a>
   </li>
-  <li role="presentation" ng-class="$ctrl.isActiveClass('user-cards')">
+  <li role="presentation" ng-class="$ctrl.isActiveClass('users')">
     <a ui-sref="users">Users</a>
   </li>
 </ul>
@@ -11,8 +11,6 @@
   <div class="row">
     <div class="col-md-12 col-xs-12">
       <ui-view></ui-view>
-      <!-- <mail-box ng-if="$ctrl.isActiveClass('mail-box')"></mail-box>
-      <user-cards ng-if="$ctrl.isActiveClass('user-cards')"></user-cards> -->
     </div>
   </div>
 </div>

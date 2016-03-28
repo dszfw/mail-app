@@ -4,7 +4,7 @@ module.component('mailInbox', {
   templateUrl: 'mail-app/mail-box/mail-inbox-sent.html',
   bindings: {
     mails: '<',
-    showMail: '&'
+    getMail: '&'
   },
   controller: function() {
     this.previewMode = 'from';
@@ -15,7 +15,7 @@ module.component('mailSent', {
   templateUrl: 'mail-app/mail-box/mail-inbox-sent.html',
   bindings: {
     mails: '<',
-    showMail: '&'
+    getMail: '&'
   },
   controller: function() {
     this.previewMode = 'to';

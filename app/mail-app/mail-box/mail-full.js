@@ -5,7 +5,7 @@ mailFull.component('mailFull', {
     mail: '<',
     prevMailIndex: '<',
     nextMailIndex: '<',
-    showMail: '&',
+    getMail: '&',
     deleteMail: '&'
   },
   templateUrl: 'mail-app/mail-box/mail-full.html'
